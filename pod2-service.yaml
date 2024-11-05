@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: pod2-service
+  namespace: servicemesh-test
+spec:
+  ipFamilies:
+    - IPv4
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  internalTrafficPolicy: Cluster
+  type: ClusterIP
+  selector:
+    app: pod2
