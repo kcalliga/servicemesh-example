@@ -13,6 +13,7 @@ spec:
       labels:
         app: pod2
         deploymentconfig: pod2
+        sidecar.istio.io/inject: 'true'
       annotations:
     spec:
       containers:
